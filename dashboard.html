@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <nav>
+            <h2>TaskFlow</h2>
+            <span>Personal Workspace</span>
+        </nav>
+
+        <section class="welcome">
+            <h1>Manage Your Day</h1>
+            <p>Stay focused and complete your goals.</p>
+        </section>
+
+        <section class="create-panel">
+            <h3>Create New Task</h3>
+
+            <input type="text" id="taskName"
+                   placeholder="Enter task description">
+
+            <div class="input-row">
+                <input type="date" id="taskDate">
+
+                <select id="taskCategory">
+                    <option value="Study">Study</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                </select>
+
+                <button id="createButton">Create Task</button>
+            </div>
+        </section>
+
+        <section class="statistics">
+            <article>
+                <span>Total Tasks</span>
+                <h2 id="total">0</h2>
+            </article>
+
+            <article>
+                <span>Completed</span>
+                <h2 id="completed">0</h2>
+            </article>
+
+            <article>
+                <span>Not Completed</span>
+                <h2 id="remaining">0</h2>
+            </article>
+        </section>
+
+        <section class="task-section">
+
+            <div class="section-heading">
+                <h2>My Task List</h2>
+
+                <select id="taskFilter">
+                    <option value="all">Show All</option>
+                    <option value="active">In Progress</option>
+                    <option value="done">Completed</option>
+                </select>
+            </div>
+
+            <div id="taskContainer"></div>
+
+        </section>
+
+        <footer>
+            <button id="clearButton">
+                Delete Completed Tasks
+            </button>
+        </footer>
+
+    </div>
+
+    <script src="manager.js"></script>
+</body>
+</html>
